@@ -1,0 +1,8 @@
+TODO
+- Fix homepage mobile display
+- Mobile navbar
+- -webkit-min-device-pixel-ratio
+
+- from Bryfe <3
+- gitlab --linked to a seperate server
+- art and asset gallery --maybe optimise resolution
