@@ -1,0 +1,213 @@
+/* root.css
+ * Created: Before July 3, 2014
+ * Authors: Sam, Allek
+ */
+
+body {
+    margin: 0;
+    background: url("/media/webopt/background-refined-webopt.jpg") fixed top left no-repeat;
+    font-size: 12pt;
+}
+
+p, ul, ol, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5em;
+}
+
+.container {
+    padding-bottom: 1em;
+    background-color: rgba(255, 255, 255, .85);
+    max-width: 1000px;
+    margin: auto;
+}
+
+/*
+.tile-group {
+    width: 50%;
+    display: inline-block;
+}
+*/
+
+.tile-group {
+    width: 100%;
+    text-align: center;
+    display: inline-table;
+}
+
+.tile {
+    display: inline-table;
+    padding: 1em;
+    border: 1px solid #36aa64;
+    float: left;
+    white-space: nowrap;
+}
+
+.download-tile {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .download-name {
+        display: block;
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .download-link {
+        display: inline-block;
+        padding: .5em;
+        margin: .5em;
+        border: 1px solid rgb(134, 220, 121);
+        border-radius: .5em;
+        background-color: rgb(255, 255, 255);
+    }
+    
+        .download-link-linux {
+            background-color: rgb(134, 220, 121);
+            color: #fff !important;
+        }
+        
+        .download-link-windows {
+            background-color: #688d75;
+            border-color: #688d75;
+            color: #fff !important;
+        }
+    
+    .download-version {
+        display: block;
+        font-style: italic;
+        font-size: .8em;
+    }
+
+/* Banner Stuff */
+.banner-container {
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding-bottom: 0em;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#header a, #header a:link, #header a:active,
+    #header a:visited, #header a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+#header a:hover {
+    text-decoration: underline;
+}
+
+#title {
+    font-family: 'Lobster';
+    font-size: 8.5em;
+}
+
+#navbar {
+    width: 100%;
+    text-align: center;
+    display: table;
+    background-color: rgb(134, 220, 121);
+    padding: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    line-height: normal;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar li a {
+    color: #000;
+    text-decoration: none;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    height: 100%;
+}
+
+#navbar li a, a:visited, a:link, a:active {
+    color: #000;
+}
+
+#navbar li:last-child a {
+    margin-right: 1em;
+}
+
+#navbar li a:hover {
+    color: #fff;
+    background-color: rgb(34, 120, 21);
+    text-decoration: none;
+}
+/* /Banner Stuff */
+
+
+
+#content {
+    width: 98%;
+    padding: 1%;
+    font-family: 'Arimo';
+    /* text-align: justify; */
+}
+
+#content a:link, a:visited {
+    color: rgb(99, 185, 86);
+    text-decoration: none;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Tablet-proofing */
+@media (min-width: 775px) {
+    #container {
+        margin: auto;
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 775px) {
+    body {
+        font-size: 14pt;
+    }
+    #container {
+        width: 100%;
+    }
+    #title {
+        font-size: 7em;
+    }
+    #content {
+        font-size: .875em;
+    }
+}
+
+@media (max-width: 650px) {
+    #title {
+        font-size: 6em;
+    }
+    #content {
+        font-size: .85em;
+    }
+}
+
+@media (max-width: 500px) {
+    #title {
+        font-size: 5em;
+    }
+    #content {
+        font-size: .825em;
+    }
+}
+/* /Tablet-proofing */

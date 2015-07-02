@@ -1,0 +1,152 @@
+hr {
+    border: 0;
+    background: #fff;
+    height: 1px;
+    width: 100%;
+}
+
+#download-pane {
+    width: 100%;
+    margin: 2em 0 2em 0;
+}
+
+    #download-pane ul {
+        list-style-type: none;
+        display: table;
+        width: 98%; /* content padding 1% */
+        text-indent: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #download-pane li {
+        display: inline;
+        border: none;
+        padding: 0;
+    }
+    
+    .download-tab-link {
+        color: #000;
+        text-decoration: none;
+        padding: 1em 1em 0.8em 1em;
+        display: inline-block;
+    }
+    
+    #download-pane a:hover, 
+        #download-pane a:link,
+        #download-pane a:active,
+        #download-pane a:visited {
+        color: #000 !important;
+    }
+    
+#download-content-pane {
+    width: 96%;
+    padding: 1% 2%;
+}
+
+.download-content-linux, .download-content-windows,
+    .download-content-mac {
+    display: none;
+}
+
+#download-content-pane.linux .download-content-linux,
+    #download-content-pane.windows .download-content-windows,
+    #download-content-pane.mac .download-content-mac {
+    display: block;
+}
+
+.download-name {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.download-link {
+    color: #000;
+    border: 1px solid #000;
+    /* border-radius: 1em; */
+    padding: 1em;
+    display: inline-block;
+    font-size: .9em;
+    
+    /* Gradient Stuff */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 50%, #e8e8e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f2f2f2), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 50%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f2f2f2 50%,#e8e8e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2f2 50%,#e8e8e8 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 50%,#e8e8e8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+    /* /Gradient Stuff */
+}
+
+.download-version {
+    font-style: italic;
+    font-size: .8em;
+}
+
+    .download-version:before {
+        content: "Version: ";
+    }    
+    
+.active {
+    border-style: solid;
+    border-width: 1px;
+    color: #fff !important;
+}
+
+.active a.linux, #download-content-pane.linux {
+    background-color: #59ba78;
+    border-color: #59ba78;
+    color: #fff;
+}
+
+.active a.mac, #download-content-pane.mac {
+    color: #fff;
+    background-color: #688d75;
+    border-color: #688d75;
+}
+
+.active a.windows, #download-content-pane.windows {
+    background-color: #9d8e63;
+    color: #fff;
+    border-color: #000;
+}
+
+/* Tablet-proofing */
+
+
+/* Generally non-handheld (laptop, desktop monitor, etc.) */
+@media (min-width: 775px),
+    (-webkit-max-device-pixel-ratio: 1),
+    (max-resolution: 60dpcm) {
+}
+
+/* Still toward non-handheld, more HD */
+@media (max-width: 775px),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 60dpcm) {
+}
+
+/* Less insane phones, tablets */
+@media handheld and
+    (not orientation: landscape) and
+    (max-width: 650px),
+    (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 100dpcm) {
+    .download-link {
+        font-size: 1.7em !important;
+    }
+    .download-tab-link {
+        font-size: 2.3em !important;
+    }
+}
+
+/* High pixel density mobile devices */
+@media handheld and
+    (not orientation: landscape) and
+    (max-width: 500px),
+    (-webkit-min-device-pixel-ratio: 1.75),
+    (min-resolution: 140dpcm) {
+}
+/* / Tablet-proofing */

@@ -1,0 +1,13 @@
+.faq-question {
+    font-style: italic;
+}
+
+.faq-answer {
+    margin-bottom: 2.5em;
+}
+
+.faq-answer-doug {
+    font-weight: bolder;
+    /*font-size: 5em; */
+    color: #ff0000;
+}
